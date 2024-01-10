@@ -8,6 +8,10 @@ const cors = require('cors');
 app.use(cors({ origin: true }));
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+  return res.send("Server is running well...")
+})
+
 app.post('/getWeather', async (req, res) => {
   const { cities } = req.body;
 
